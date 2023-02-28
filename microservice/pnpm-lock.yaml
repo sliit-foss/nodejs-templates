@@ -6,10 +6,10 @@ specifiers:
   '@babel/node': 7.20.7
   '@babel/preset-env': 7.17.12
   '@sliit-foss/clusterizer': 1.1.1
-  '@sliit-foss/functions': 1.0.1
+  '@sliit-foss/functions': 1.0.2
   '@sliit-foss/module-logger': 1.1.1
   '@sliit-foss/mongoose-filter-query': 1.1.1
-  celebrate: 7.0.6
+  celebrate: 15.0.1
   compression: 1.7.2
   cors: 2.8.5
   cross-env: 5.1.4
@@ -41,10 +41,10 @@ specifiers:
 
 dependencies:
   '@sliit-foss/clusterizer': 1.1.1
-  '@sliit-foss/functions': 1.0.1
+  '@sliit-foss/functions': 1.0.2
   '@sliit-foss/module-logger': 1.1.1
   '@sliit-foss/mongoose-filter-query': 1.1.1
-  celebrate: 7.0.6
+  celebrate: 15.0.1
   compression: 1.7.2
   cors: 2.8.5
   dotenv: 10.0.0
@@ -2122,6 +2122,16 @@ packages:
     dev: false
     optional: true
 
+  /@hapi/hoek/9.3.0:
+    resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
+    dev: false
+
+  /@hapi/topo/5.1.0:
+    resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+    dev: false
+
   /@ioredis/commands/1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
     dev: false
@@ -2191,12 +2201,26 @@ packages:
       fastq: 1.15.0
     dev: false
 
+  /@sideway/address/4.1.4:
+    resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+    dev: false
+
+  /@sideway/formula/3.0.1:
+    resolution: {integrity: sha512-/poHZJJVjx3L+zVD6g9KgHfYnb443oi7wLu/XKojDviHy6HOEOA6z1Trk5aR1dGcmPenJEgb2sK2I80LeS3MIg==}
+    dev: false
+
+  /@sideway/pinpoint/2.0.0:
+    resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+    dev: false
+
   /@sliit-foss/clusterizer/1.1.1:
     resolution: {integrity: sha512-vb8DnjbE4DAEG4N1CPZn8NAInGHm82zv2dTqSyQzw/Itt+vSRAVB/TfKdfTfHpN75w2Ti6VPSQzMocU8cLPOHg==}
     dev: false
 
-  /@sliit-foss/functions/1.0.1:
-    resolution: {integrity: sha512-4utfM+dPsPUzYeb8dypCP+FWNkTZQBbApDWAvg5J9S49BhTSZsDS2fGcwR13pKn6RFzbBOCSg0VRWr6OxJvVJQ==}
+  /@sliit-foss/functions/1.0.2:
+    resolution: {integrity: sha512-1UbHTqEMJaOn/zV+1X/vxz0K/ELqbzd/df+dZ/QC5jrA4f3xoyxnQlxWunizGNpOl2lK37o1ccqppqjMd8nJkg==}
     dependencies:
       '@sliit-foss/module-logger': 1.1.1
     dev: false
@@ -2727,13 +2751,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /celebrate/7.0.6:
-    resolution: {integrity: sha512-bB9XbUyRzQPnitdtXEGjF8lM8AzCkx1/VKRLGx0wMp2nSuoI9/bGXz9i/YC0vDkO4fZXdymyRYQVfvWjU2Ek1g==}
-    engines: {node: '>=4.0.0'}
+  /celebrate/15.0.1:
+    resolution: {integrity: sha512-K2y221k10u+K2t9w25802qXh8h1mVWZf+6pl7zHdlhhwzrOSQFnnw+GsR8k17oyn4Y3fVErBGsO/+CeW8N7aRQ==}
     dependencies:
       escape-html: 1.0.3
-      fastseries: 1.7.2
-      joi: 12.0.0
+      joi: 17.8.3
+      lodash: 4.17.21
     dev: false
 
   /chalk/2.4.2:
@@ -3924,13 +3947,6 @@ packages:
       reusify: 1.0.4
     dev: false
 
-  /fastseries/1.7.2:
-    resolution: {integrity: sha512-dTPFrPGS8SNSzAt7u/CbMKCJ3s01N04s4JFbORHcmyvVfVKmbhMD1VtRbh5enGHxkaQDqWyLefiKOGGmohGDDQ==}
-    dependencies:
-      reusify: 1.0.4
-      xtend: 4.0.2
-    dev: false
-
   /fecha/4.2.3:
     resolution: {integrity: sha512-OP2IUU6HeYKJi3i0z4A19kHMQoLVs4Hc+DPqqxI2h/DPZHTm/vjsfC6P0b4jCMy14XizLBqvndQ+UilD7707Jw==}
     dev: false
@@ -4357,12 +4373,6 @@ packages:
 
   /hide-powered-by/1.0.0:
     resolution: {integrity: sha512-x3IRfbNpJL6yAv0/w6orSgmswTv/m7xVgX0/mPNhtPDAyZhttfS3maOjHVcC6kuOxbFc6ZO8bDKZd/hwBFU+Jw==}
-    dev: false
-
-  /hoek/4.2.1:
-    resolution: {integrity: sha512-QLg82fGkfnJ/4iy1xZ81/9SIJiq1NGFUMGs6ParyjBZr6jW2Ufj/snDqTHixNlHdPNwN2RLVD0Pi3igeK9+JfA==}
-    engines: {node: '>=4.0.0'}
-    deprecated: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
     dev: false
 
   /homedir-polyfill/1.0.3:
@@ -4824,13 +4834,6 @@ packages:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
     dev: true
 
-  /isemail/3.2.0:
-    resolution: {integrity: sha512-zKqkK+O+dGqevc93KNsbZ/TqTUFd46MwWjYOoMrjIMZ51eU7DtQG3Wmd9SQQT7i7RVnuTPEiYEWHU3MSbxC1Tg==}
-    engines: {node: '>=4.0.0'}
-    dependencies:
-      punycode: 2.3.0
-    dev: false
-
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
@@ -4851,14 +4854,14 @@ packages:
     resolution: {integrity: sha512-5IZ7sY9dBAYSV+YjQ0Ovb540Ku7AO9Z5o2Cg789xj167iQuZ2cG+z0f3Uct6WeYLbU6aQiM2pCs7sZ+4dotydw==}
     dev: true
 
-  /joi/12.0.0:
-    resolution: {integrity: sha512-z0FNlV4NGgjQN1fdtHYXf5kmgludM65fG/JlXzU6+rwkt9U5UWuXVYnXa2FpK0u6+qBuCmrm5byPNuiiddAHvQ==}
-    engines: {node: '>=4.0.0'}
-    deprecated: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
+  /joi/17.8.3:
+    resolution: {integrity: sha512-q5Fn6Tj/jR8PfrLrx4fpGH4v9qM6o+vDUfD4/3vxxyg34OmKcNqYZ1qn2mpLza96S8tL0p0rIw2gOZX+/cTg9w==}
     dependencies:
-      hoek: 4.2.1
-      isemail: 3.2.0
-      topo: 2.0.2
+      '@hapi/hoek': 9.3.0
+      '@hapi/topo': 5.1.0
+      '@sideway/address': 4.1.4
+      '@sideway/formula': 3.0.1
+      '@sideway/pinpoint': 2.0.0
     dev: false
 
   /js-tokens/4.0.0:
@@ -6639,14 +6642,6 @@ packages:
     engines: {node: '>=0.6'}
     dev: false
 
-  /topo/2.0.2:
-    resolution: {integrity: sha512-QMfJ9TC5lKcmLZImOZ/BTSWJeVbay7XK2nlzvFALW3BA5OkvBnbs0poku4EsRpDMndDVnM58EU/8D3ZcoVehWg==}
-    engines: {node: '>=4.0.0'}
-    deprecated: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-    dependencies:
-      hoek: 4.2.1
-    dev: false
-
   /touch/3.1.0:
     resolution: {integrity: sha512-WBx8Uy5TLtOSRtIq+M03/sKDrXCLHxwDcquSP2c43Le03/9serjQBIztjRz6FkJez9D/hleyAXTBGLwwZUw9lA==}
     hasBin: true
@@ -7002,11 +6997,6 @@ packages:
     resolution: {integrity: sha512-1Dly4xqlulvPD3fZUQJLY+FUIeqN3N2MM3uqe4rCJftAvOjFa3jFGfctOgluGx4ahPbUCsZkmJILiP0Vi4T6lQ==}
     engines: {node: '>=4'}
     dev: true
-
-  /xtend/4.0.2:
-    resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
-    engines: {node: '>=0.4'}
-    dev: false
 
   /yallist/2.1.2:
     resolution: {integrity: sha512-ncTzHV7NvsQZkYe1DW7cbDLm0YpzHmZF5r/iyP3ZnQtMiJ+pjzisCiMNI+Sj+xQF5pXhSHxSB3uDbsBTzY/c2A==}

@@ -9,7 +9,7 @@
   },
   "main": "dist/server.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/server.js --enable-source-maps",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/server.js --exitcrash --enable-source-maps",
     "start": "node dist/server.js --enable-source-maps",
     "build": "node esbuild.config.js",
     "lint": "eslint --ignore-path .gitignore .",
@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "@sliit-foss/clusterizer": "1.1.1",
-    "@sliit-foss/functions": "1.0.1",
+    "@sliit-foss/functions": "1.0.2",
     "@sliit-foss/module-logger": "1.1.1",
     "@sliit-foss/mongoose-filter-query": "1.1.1",
-    "celebrate": "7.0.6",
+    "celebrate": "15.0.1",
     "compression": "1.7.2",
     "cors": "2.8.5",
     "dotenv": "10.0.0",

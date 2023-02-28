@@ -1,2 +1,3 @@
-export * from './rateLimiter';
+export * from './errors';
 export * from './interceptors';
+export * from './rateLimiter';

@@ -6,8 +6,9 @@ import cors from 'cors';
 import context from 'express-http-context';
 import polyglot from "node-polyglot";
 import clusterize from '@sliit-foss/clusterizer';
+import { correlationId } from "./utils";
 import { moduleLogger } from '@sliit-foss/module-logger';
-import { defaultLimiter as rateLimiter, responseInterceptor } from './middleware';
+import { defaultLimiter as rateLimiter, errorHandler, responseInterceptor } from './middleware';
 import { default as translations } from './locales';
 import config from './config';
 import routes from './routes';
@@ -28,8 +29,7 @@ clusterize(
     app.use(context.middleware);
 
     app.use((req, _res, next) => {
-      const correlationId = req.headers[correlationId] ?? crypto.randomUUID();
-      context.set('correlationId', correlationId);
+      context.set('correlationId', req.headers[correlationId] ?? crypto.randomUUID());
       next();
     });
 
@@ -45,9 +45,7 @@ clusterize(
 
     app.use(responseInterceptor);
 
-    app.use((err, _req, res, _next) => res.status(err.status ?? 500).json({
-      message: err.message,
-    }));
+    app.use(errorHandler)
 
     app.listen(config.PORT, config.HOST, () => {
       logger.info(`Service listening on ${config.HOST}:${config.PORT}`);
