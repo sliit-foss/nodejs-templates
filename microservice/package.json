@@ -1,0 +1,67 @@
+{
+  "name": "node-microservice-template",
+  "version": "1.0.0",
+  "description": "node-microservice-template",
+  "author": "FOSS",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/server.js --enable-source-maps",
+    "start": "node dist/server.js --enable-source-maps",
+    "build": "node esbuild.config.js",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@sliit-foss/clusterizer": "1.1.1",
+    "@sliit-foss/functions": "1.0.1",
+    "@sliit-foss/module-logger": "1.1.1",
+    "@sliit-foss/mongoose-filter-query": "1.1.1",
+    "celebrate": "7.0.6",
+    "compression": "1.7.2",
+    "cors": "2.8.5",
+    "dotenv": "10.0.0",
+    "esbuild": "0.15.10",
+    "esbuild-plugin-glob": "2.2.1",
+    "express": "4.16.3",
+    "express-http-context": "1.2.4",
+    "express-rate-limit": "6.7.0",
+    "helmet": "3.12.0",
+    "http-errors": "2.0.0",
+    "ioredis": "5.2.3",
+    "lodash": "4.17.10",
+    "migrate-mongo": "9.0.0",
+    "mongoose": "^6.3.4",
+    "mongoose-lean-defaults": "2.2.1",
+    "mongoose-paginate-v2": "1.6.3",
+    "node-polyglot": "2.4.2",
+    "rate-limit-redis": "3.0.1",
+    "redlock": "4.2.0",
+    "rimraf": "3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.17.10",
+    "@babel/core": "7.17.12",
+    "@babel/node": "7.20.7",
+    "@babel/preset-env": "7.17.12",
+    "cross-env": "5.1.4",
+    "eslint": "7.5.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "husky": "8.0.3",
+    "nodemon": "1.12.1",
+    "prettier": "1.11.1"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sliit-foss/nodejs-templates.git"
+  }
+}

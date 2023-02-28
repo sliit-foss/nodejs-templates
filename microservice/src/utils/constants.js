@@ -1,0 +1,1 @@
+export const correlationId = 'x-correlation-id';
