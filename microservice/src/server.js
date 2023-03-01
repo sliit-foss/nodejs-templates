@@ -29,7 +29,7 @@ clusterize(
     app.use(context.middleware);
 
     app.use((req, _res, next) => {
-      context.set('correlationId', req.headers[correlationId] ?? crypto.randomUUID());
+      context.set('correlationId', req.headers[correlationId] ?? crypto.randomBytes(16).toString("hex"));
       next();
     });
 

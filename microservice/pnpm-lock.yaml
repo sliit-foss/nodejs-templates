@@ -6,8 +6,8 @@ specifiers:
   '@babel/node': 7.20.7
   '@babel/preset-env': 7.17.12
   '@sliit-foss/clusterizer': 1.1.1
-  '@sliit-foss/functions': 1.0.2
-  '@sliit-foss/module-logger': 1.1.1
+  '@sliit-foss/functions': 1.1.0
+  '@sliit-foss/module-logger': 1.1.2
   '@sliit-foss/mongoose-filter-query': 1.1.1
   celebrate: 15.0.1
   compression: 1.7.2
@@ -41,8 +41,8 @@ specifiers:
 
 dependencies:
   '@sliit-foss/clusterizer': 1.1.1
-  '@sliit-foss/functions': 1.0.2
-  '@sliit-foss/module-logger': 1.1.1
+  '@sliit-foss/functions': 1.1.0
+  '@sliit-foss/module-logger': 1.1.2
   '@sliit-foss/mongoose-filter-query': 1.1.1
   celebrate: 15.0.1
   compression: 1.7.2
@@ -2219,14 +2219,15 @@ packages:
     resolution: {integrity: sha512-vb8DnjbE4DAEG4N1CPZn8NAInGHm82zv2dTqSyQzw/Itt+vSRAVB/TfKdfTfHpN75w2Ti6VPSQzMocU8cLPOHg==}
     dev: false
 
-  /@sliit-foss/functions/1.0.2:
-    resolution: {integrity: sha512-1UbHTqEMJaOn/zV+1X/vxz0K/ELqbzd/df+dZ/QC5jrA4f3xoyxnQlxWunizGNpOl2lK37o1ccqppqjMd8nJkg==}
+  /@sliit-foss/functions/1.1.0:
+    resolution: {integrity: sha512-uAljBUgBkdMnerAG/Tp8Wpumzp+hB++zYhlL0q46owzG+N6ES2HsMx2ZF+m63vOlo8JtE1V8lkJAXQfgUju6Mw==}
     dependencies:
-      '@sliit-foss/module-logger': 1.1.1
+      '@sliit-foss/module-logger': 1.1.2
+      express-http-context: 1.2.4
     dev: false
 
-  /@sliit-foss/module-logger/1.1.1:
-    resolution: {integrity: sha512-kiesMJCEJIcif5eBRmFZCn/RFC3uSBcdW8QMixPaiSvj8SFmIGtQ/6efyMagR831jWpZJ+bxZROqfp/H8k+KKA==}
+  /@sliit-foss/module-logger/1.1.2:
+    resolution: {integrity: sha512-Mr2zGZhaN52EKVk0ElWMqeYwMDQp4eEuiIQkYWzUuhupZRgPTpF8Bbp4AT46Sslq+BGlTTVdyUVNSWpPa8FEBA==}
     dependencies:
       express-http-context: 1.2.4
       winston: 3.8.2
