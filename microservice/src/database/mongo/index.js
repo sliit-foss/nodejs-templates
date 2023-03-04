@@ -1,25 +1,25 @@
-import mongoose from "mongoose";
-import { moduleLogger } from "@sliit-foss/module-logger";
-import config from "../../config";
+import mongoose from 'mongoose';
+import { moduleLogger } from '@sliit-foss/module-logger';
+import config from '../../config';
 
-const logger = moduleLogger("DB-Connector");
+const logger = moduleLogger('DB-Connector');
 
-export const connectDatabase = async () => {
-    try {
-        mongoose.connect(config.DB_URL, {
-            keepAlive: true,
-            socketTimeoutMS: 30000,
-        });
-        logger.info(`Connected to database successfully`);
-    } catch (err) {
-        logger.error(`Failed to connect to the database | message: ${err.message}`);
-    }
+export const connectDatabase = () => {
+  try {
+    mongoose.connect(config.DB_URL, {
+      keepAlive: true,
+      socketTimeoutMS: 30000,
+    });
+    logger.info(`Connected to database successfully`);
+  } catch (err) {
+    logger.error(`Failed to connect to the database | message: ${err.message}`);
+  }
 
-    mongoose.connection.on("error", (err) => logger.error(`Database error - message: ${err.message} - error: ${err.message}`));
+  mongoose.connection.on('error', (err) => logger.error(`Database error - message: ${err.message} - error: ${err.message}`));
 
-    mongoose.connection.on("disconnected", () => logger.error(`Database disconnected`));
+  mongoose.connection.on('disconnected', () => logger.error(`Database disconnected`));
 
-    mongoose.connection.on("reconnected", () => logger.info(`Database reconnected`));
+  mongoose.connection.on('reconnected', () => logger.info(`Database reconnected`));
 
-    process.on("exit", () => mongoose.disconnect());
+  process.on('exit', () => mongoose.disconnect());
 };

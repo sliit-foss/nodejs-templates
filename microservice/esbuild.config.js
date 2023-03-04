@@ -1,3 +1,5 @@
+/* eslint-disable import/unambiguous */
+
 const execSync = require('child_process').execSync;
 const { globPlugin } = require('esbuild-plugin-glob');
 

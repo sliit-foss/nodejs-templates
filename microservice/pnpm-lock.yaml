@@ -14,6 +14,7 @@ specifiers:
   cors: 2.8.5
   cross-env: 5.1.4
   dotenv: 10.0.0
+  dotenv-cli: 7.0.0
   esbuild: 0.15.10
   esbuild-plugin-glob: 2.2.1
   eslint: 7.5.0
@@ -72,6 +73,7 @@ devDependencies:
   '@babel/node': 7.20.7_@babel+core@7.17.12
   '@babel/preset-env': 7.17.12_@babel+core@7.17.12
   cross-env: 5.1.4
+  dotenv-cli: 7.0.0
   eslint: 7.5.0
   eslint-config-prettier: 2.9.0_eslint@7.5.0
   eslint-plugin-import: 2.8.0_eslint@7.5.0
@@ -3199,10 +3201,30 @@ packages:
       is-obj: 1.0.1
     dev: true
 
+  /dotenv-cli/7.0.0:
+    resolution: {integrity: sha512-XfMzVdpdDTRnlcgvFLg3lSyiLXqFxS4tH7RbK5IxkC4XIUuxPyrGoDufkfLjy/dA28EILzEu+mros6h8aQmyGg==}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      dotenv: 16.0.3
+      dotenv-expand: 10.0.0
+      minimist: 1.2.8
+    dev: true
+
+  /dotenv-expand/10.0.0:
+    resolution: {integrity: sha512-GopVGCpVS1UKH75VKHGuQFqS1Gusej0z4FyQkPdwjil2gNIv+LNsqBlboOzpJFZKVT95GkCyWJbBSdFEFUWI2A==}
+    engines: {node: '>=12'}
+    dev: true
+
   /dotenv/10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
     engines: {node: '>=10'}
     dev: false
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: true
 
   /duplexer/0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}

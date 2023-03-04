@@ -7,10 +7,11 @@ const options = {
   standardHeaders: true,
   legacyHeaders: false,
   max: 60,
-  message: (_req, res) => res.status(429).json({
-    message: `Too many requests`,
-  }),
-}
+  message: (_req, res) =>
+    res.status(429).json({
+      message: `Too many requests`,
+    }),
+};
 
 if (config.REDIS_CONNECTION_STRING) {
   const { redis } = require('../database/redis').default;

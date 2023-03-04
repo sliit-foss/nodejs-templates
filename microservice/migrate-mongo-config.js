@@ -1,3 +1,5 @@
+/* eslint-disable import/unambiguous */
+
 require('dotenv/config');
 
 module.exports = {

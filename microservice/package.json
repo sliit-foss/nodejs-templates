@@ -9,9 +9,10 @@
   },
   "main": "dist/server.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/server.js --exitcrash --enable-source-maps",
+    "dev": "cross-env NODE_ENV=development dotenv -- nodemon --exec babel-node src/server.js --exitcrash --enable-source-maps",
     "start": "node dist/server.js --enable-source-maps",
     "build": "node esbuild.config.js",
+    "format": "prettier --write \"**/*.{js,md}\"",
     "lint": "eslint --ignore-path .gitignore .",
     "prepare": "husky install"
   },
@@ -48,6 +49,7 @@
     "@babel/node": "7.20.7",
     "@babel/preset-env": "7.17.12",
     "cross-env": "5.1.4",
+    "dotenv-cli": "7.0.0",
     "eslint": "7.5.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.8.0",

@@ -24,7 +24,7 @@ const config = Base.values;
 const { error } = Joi.object(Base.schema).validate(config);
 
 if (error) {
-  console.error(`Environment validation failed. \nDetails - ${error.details[0].message}\nExiting...`)
+  console.error(`Environment validation failed. \nDetails - ${error.details[0].message}\nExiting...`);
   process.exit(1);
 }
 
