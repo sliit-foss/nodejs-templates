@@ -3,7 +3,8 @@ import { moduleLogger } from '@sliit-foss/module-logger';
 
 const logger = moduleLogger('Error-handler');
 
-export const errorHandler = (err, _req, res) => {
+// eslint-disable-next-line no-unused-vars
+export const errorHandler = (err, _req, res, _next) => {
   if (!res.errorLogged) {
     logger.error(err.message, err);
     res.errorLogged = true;

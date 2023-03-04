@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@sliit-foss/clusterizer": "1.1.1",
-    "@sliit-foss/functions": "2.0.0",
+    "@sliit-foss/functions": "2.0.1",
     "@sliit-foss/module-logger": "1.1.2",
     "@sliit-foss/mongoose-filter-query": "1.1.1",
     "celebrate": "15.0.1",
