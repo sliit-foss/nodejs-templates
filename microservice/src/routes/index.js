@@ -1,8 +1,14 @@
+import fs from 'fs';
 import express from 'express';
-import systemRoutes from '../modules/system';
 
 const router = express.Router();
 
-router.use('/system', systemRoutes);
+// Register all modules
+
+fs.readdirSync(`${__dirname}/../modules`)?.forEach((module) => {
+    fs.readdirSync(`${__dirname}/../modules/${module}/api`)?.forEach((v) => {
+        router.use(`/${v}/${module}`, require(`../modules/${module}/api/${v}/controller`).default)
+    });
+});
 
 export default router;
