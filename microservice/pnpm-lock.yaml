@@ -9,7 +9,7 @@ specifiers:
   '@sliit-foss/functions': 2.0.1
   '@sliit-foss/module-logger': 1.1.2
   '@sliit-foss/mongoose-filter-query': 1.1.1
-  '@sliit-foss/service-connector': 1.1.1
+  '@sliit-foss/service-connector': 1.1.2
   celebrate: 15.0.1
   compression: 1.7.2
   cors: 2.8.5
@@ -47,7 +47,7 @@ dependencies:
   '@sliit-foss/functions': 2.0.1
   '@sliit-foss/module-logger': 1.1.2
   '@sliit-foss/mongoose-filter-query': 1.1.1
-  '@sliit-foss/service-connector': 1.1.1
+  '@sliit-foss/service-connector': 1.1.2
   celebrate: 15.0.1
   compression: 1.7.2
   cors: 2.8.5
@@ -2278,8 +2278,8 @@ packages:
     resolution: {integrity: sha512-VOhUApMiKCrxEeVme8gVlgci3BG8L0AxNN/FSrunUuPUx/lqDM3RGn/b0PlLm7d2remiHB6m89fDCTNDHvopKQ==}
     dev: false
 
-  /@sliit-foss/service-connector/1.1.1:
-    resolution: {integrity: sha512-RYDb9HbdpOFJrnDM5dJsbePELeX/e/20ImhB4g3G+xLflsbH8G+H9tYGfDzIro21c5EpYwGMG7/gYA8p8TtZWg==}
+  /@sliit-foss/service-connector/1.1.2:
+    resolution: {integrity: sha512-bvfKPJRN9AayEmTZQOsmChgoXlNu4scF7VL0X/w2shzgu/Ag6aeSxQ7YSxNUKOcdk6SMeu+lFCjI+0lM/JmfhQ==}
     dependencies:
       '@sliit-foss/module-logger': 1.1.2
       axios: 1.3.2

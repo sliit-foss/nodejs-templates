@@ -21,7 +21,7 @@
     "@sliit-foss/functions": "2.0.1",
     "@sliit-foss/module-logger": "1.1.2",
     "@sliit-foss/mongoose-filter-query": "1.1.1",
-    "@sliit-foss/service-connector": "1.1.1",
+    "@sliit-foss/service-connector": "1.1.2",
     "celebrate": "15.0.1",
     "compression": "1.7.2",
     "cors": "2.8.5",
