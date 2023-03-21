@@ -2,7 +2,7 @@
   "name": "node-microservice-template",
   "version": "1.0.0",
   "description": "node-microservice-template",
-  "author": "FOSS",
+  "author": "SLIIT-FOSS",
   "engines": {
     "node": ">=16",
     "npm": ">=8"
@@ -17,11 +17,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sliit-foss/clusterizer": "1.1.1",
-    "@sliit-foss/functions": "2.0.1",
-    "@sliit-foss/module-logger": "1.1.2",
+    "@sliit-foss/clusterizer": "1.1.2",
+    "@sliit-foss/functions": "2.0.3",
+    "@sliit-foss/module-logger": "1.1.3",
     "@sliit-foss/mongoose-filter-query": "1.1.1",
-    "@sliit-foss/service-connector": "1.1.2",
+    "@sliit-foss/service-connector": "1.2.2",
     "celebrate": "15.0.1",
     "compression": "1.7.2",
     "cors": "2.8.5",
