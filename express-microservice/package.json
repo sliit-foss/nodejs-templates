@@ -1,7 +1,7 @@
 {
-  "name": "node-microservice-template",
+  "name": "express-microservice-template",
   "version": "1.0.0",
-  "description": "node-microservice-template",
+  "description": "express-microservice-template",
   "author": "SLIIT-FOSS",
   "engines": {
     "node": ">=16",
