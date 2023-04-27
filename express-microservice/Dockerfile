@@ -22,4 +22,4 @@ RUN sed -i 's/src\/database\/mongo\/migrations/migration_scripts/g' migrate-mong
 
 EXPOSE 8080
 
-CMD node dist/index.js --enable-source-maps
+CMD node dist/server.js --enable-source-maps
