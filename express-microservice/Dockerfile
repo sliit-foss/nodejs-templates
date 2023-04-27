@@ -14,7 +14,7 @@ FROM node:16-alpine
 WORKDIR /usr/app
 
 COPY package.json migrate-mongo-config.js ./
-COPY database/mongo/migrations migration_scripts
+COPY src/database/mongo/migrations migration_scripts
 COPY --from=builder /usr/app/dist dist
 COPY --from=builder /usr/app/node_modules node_modules
 
