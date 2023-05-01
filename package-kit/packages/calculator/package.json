@@ -1,0 +1,29 @@
+{
+    "name": "@organization-name/calculator",
+    "version": "0.0.0",
+    "description": "Just a small template npm package",
+    "main": "dist/index.js",
+    "types": "types/index.d.ts",
+    "scripts": {
+        "build": "node ../../scripts/esbuild.config.js",
+        "build:watch": "bash ../../scripts/esbuild.watch.sh",
+        "bump-version": "pnpm build && npx automatic-versioning --name=@organization-name/calculator --no-commit --recursive",
+        "lint": "bash ../../scripts/lint.sh",
+        "release": "bash ../../scripts/release.sh",
+        "test": "bash ../../scripts/test/test.sh"
+    },
+    "author": "SLIIT FOSS",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sliit-foss/nodejs-templates.git"
+    },
+    "homepage": "https://github.com/sliit-foss/nodejs-templates/blob/main/package-kit/packages/calculator/readme.md",
+    "keywords": [
+        "calculator",
+        "template-package"
+    ],
+    "bugs": {
+        "url": "https://github.com/sliit-foss/nodejs-templates/issues"
+    }
+}

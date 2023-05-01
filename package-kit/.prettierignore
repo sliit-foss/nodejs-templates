@@ -2,4 +2,3 @@ packages/**/node_modules/**
 packages/**/dist/**
 packages/**/coverage/**
 packages/**/.turbo/**
-packages/templates/src/stacks/**
