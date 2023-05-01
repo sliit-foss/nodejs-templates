@@ -1,6 +1,6 @@
-# npm-catalogue
+# package-kit
 
-### A curated list of NPM packages developed by the SLIIT FOSS community
+### A monorepository template built for easing the development and maintainence of npm packages
 
 <br/>
 
