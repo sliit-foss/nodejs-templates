@@ -1,7 +1,7 @@
 {
     "name": "@organization-name/calculator",
     "version": "0.0.0",
-    "description": "Just a small template npm package",
+    "description": "Just a minimal npm package template",
     "main": "dist/index.js",
     "types": "types/index.d.ts",
     "scripts": {

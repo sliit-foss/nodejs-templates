@@ -1,6 +1,6 @@
 # @organization-name/calculator
 
-### Just a small template npm package<br><br>
+### Just a minimal npm package template<br><br>
 
 ## Usage
 
