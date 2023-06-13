@@ -14,7 +14,10 @@ redis.on('error', (err) => logger.error(`Redis error - message: ${err.message}`,
 
 redis.setKey = redis.set;
 
-redis.set = (key, value, ttl) => redis.setKey(key, value, 'EX', ttl ?? 30);
+redis.set = (key, value, ttl) => {
+    if (typeof value !== 'string') value = JSON.stringify(value);
+    return redis.setKey(key, value, 'EX', ttl ?? 30);
+};
 
 redis.getOrDefault = async (key, defaultValue) => {
     let res = await redis.get(key);
