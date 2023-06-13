@@ -16,4 +16,12 @@ redis.setKey = redis.set;
 
 redis.set = (key, value, ttl) => redis.setKey(key, value, 'EX', ttl ?? 30);
 
+redis.getOrDefault = async (key, defaultValue) => {
+    let res = await redis.get(key);
+    if (res) return JSON.parse(res);
+    res = typeof defaultValue === 'function' ? await defaultValue() : defaultValue;
+    if (res) redis.set(key, JSON.stringify(res));
+    return res;
+};
+
 export default { redis, redlock };
