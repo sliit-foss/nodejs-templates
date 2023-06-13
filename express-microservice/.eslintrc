@@ -1,8 +1,7 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:import/recommended",
-    "plugin:prettier/recommended"
+    "plugin:import/recommended"
   ],
   "env": {
     "browser": false,
@@ -11,11 +10,10 @@
     "es6": true
   },
   "plugins": [
-    "import",
-    "prettier"
+    "import"
   ],
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": 2022,
     "sourceType": "module",
     "requireConfigFile": false
   },
@@ -73,16 +71,6 @@
     "object-curly-spacing": [
       "error",
       "always"
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "printWidth": 180,
-        "tabWidth": 2,
-        "singleQuote": true,
-        "trailingComma": "all",
-        "arrowParens": "always"
-      }
     ],
     "import/newline-after-import": [
       "error",
